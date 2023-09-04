@@ -18,4 +18,4 @@ Conhecer a orientação de objetos e estruturas de dados, suas características,
 
 2. Revisão de Linguagem Estruturada [slides](https://docs.google.com/presentation/d/e/2PACX-1vQ3Rob5yJ_wwR6GeJk_68BZEoSLF1aZCJgCNxc_KyhhD5KvLb9ufwdxV750NhCQcCBUcJQQ9tjfvJap/pub?start=false&loop=false&delayms=3000)
 
-3. 
+3. Classes [slides](https://docs.google.com/presentation/d/e/2PACX-1vT3_M1LEp-HLjcDeK3H3VtQO7VTkL106uBKcqzgmGw7LQK6aF0RixJEEZ1K4GzQkglOnAUrfOvjXdio/pub?start=false&loop=false&delayms=3000)
