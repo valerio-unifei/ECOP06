@@ -100,6 +100,12 @@ Isso abrirá seu aplicativo no navegador padrão.
 
 Lembre-se de que o uso de um ambiente virtual é importante para manter as dependências do projeto isoladas de outros projetos e do ambiente global do Python. Isso ajuda a garantir que seu aplicativo funcione de maneira consistente e evita conflitos de pacotes.
 
+## Exemplo de projeto on-line
+
+Repositório: [ChatVSF](https://github.com/valerio-unifei/ChatVSF)
+Site on-line: [ChatVSF](https://chatvsf.streamlit.app)
+
+
 # Proposta
 
 Construa um sistema monitoramento de um hospital com a montagem de gráficos baseados na base de dados abaixo:
