@@ -103,6 +103,7 @@ Lembre-se de que o uso de um ambiente virtual é importante para manter as depen
 ## Exemplo de projeto on-line
 
 Repositório: [ChatVSF](https://github.com/valerio-unifei/ChatVSF)
+
 Site on-line: [ChatVSF](https://chatvsf.streamlit.app)
 
 
