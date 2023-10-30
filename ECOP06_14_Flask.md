@@ -131,7 +131,17 @@ if __name__ == 'main':
    app.run(debug=True)
 ```
 
-Execute.
+
+### Bibliotecas e execução
+
+```console
+pip install flask gunicorn
+```
+
+Execute o código abaixo:
+```console
+guvicorn -w 4 "app:app"
+```
 
 Conceitos apresentados aqui:
 1. Formulário e campos de entrada
