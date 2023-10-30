@@ -97,7 +97,7 @@ Execute.
 
 Modifique o arquivo *index.html* na pasta "templates":
 
-```
+```html
 <!DOCTYPE HTML>
 <html>
   <head>
