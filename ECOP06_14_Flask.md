@@ -108,7 +108,7 @@ Modifique o arquivo *index.html* na pasta "templates":
       Qual é seu nome? <input type="text" name="nome">
       <input type="submit" name="submit" value="Enviar">
     </form>
-    {% if name %}
+    {% if nome %}
       <h1>Olá, {{nome}}!</h1>
     {% endif %}
   </body>
@@ -124,7 +124,7 @@ app = Flask(__name__)
 def index():
   nome = None
   if request.method == 'POST' and 'nome' in request.form:
-    name = request.form['nome']
+    nome = request.form['nome']
   return render_template('index.html', nome=nome)
 
 app.run(debug=True)
