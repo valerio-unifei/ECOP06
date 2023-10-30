@@ -136,3 +136,9 @@ Conceitos apresentados aqui:
 1. Formulário e campos de entrada
 2. Rotas com comandos GET e POST
 3. Estruturas embutidas Python (Jinja2) no HTML
+
+# Gerar um site em produção
+Crie um repositório com o último projeto.
+Use o site [Render](render.com) para subir seu site on-line.
+
+
