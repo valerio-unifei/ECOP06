@@ -140,7 +140,7 @@ pip install flask gunicorn
 
 Execute o código abaixo:
 ```console
-guvicorn -w 4 "app:app"
+gunicorn -w 4 "app:app"
 ```
 
 Conceitos apresentados aqui:
