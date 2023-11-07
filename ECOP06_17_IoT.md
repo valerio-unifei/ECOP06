@@ -41,23 +41,20 @@ default_envs = heltec_wifi_lora_32_v2
 build_flags = -D ABP_ACTIVATION
 build_flags = -D CFG_au915=1
 ```
+ 5. Edite o arquivo src/LMIC-node.cpp e ajuste a configuração da sub-banda:
+  - No trecho "#elif defined(CFG_us915) || defined(CFG_au915)", altere o valor de LMIC_selectSubBand de 1 para 0.
+ 6. Acesse o site do The Things Network (TTN) (https://www.thethingsnetwork.org/) e crie uma conta.
+ 7. Acesse o cluster Australiano do TTN (https://au1.cloud.thethings.network/console).
+ 8. Crie uma nova aplicação no TTN.
+ 9. Crie um novo dispositivo (End Device) para a aplicação, selecione a frequência Australiana e escolha o modo de autenticação ABP.
+ 10. Gere aleatoriamente as chaves necessárias e salve o dispositivo.
+ 11. Copie as chaves (DevAddr, NwkSKey e AppSKey) do TTN para o arquivo de firmware do PlatformIO (keyfiles/lorawan-keys.h).
  5. Edite o arquivo keyfiles/lorawan-keys.h e preencha as seguintes informações:
-```ini
+```c
 #define ABP_DEVADDR
 #define ABP_NWKSKEY
 #define ABP_APPSKEY
 ```
-(Essas informações serão obtidas posteriormente)
-6. Edite o arquivo src/LMIC-node.cpp e ajuste a configuração da sub-banda:
- No trecho "#elif defined(CFG_us915) || defined(CFG_au915)", altere o valor de LMIC_selectSubBand de 1 para 0.
-7. Acesse o site do The Things Network (TTN) (https://www.thethingsnetwork.org/) e crie uma conta.
-8. Acesse o cluster Australiano do TTN (https://au1.cloud.thethings.network/console).
-9. Crie uma nova aplicação no TTN.
-10. Crie um novo dispositivo (End Device) para a aplicação, selecione a frequência Australiana e escolha o modo de autenticação ABP.
-11. Gere aleatoriamente as chaves necessárias e salve o dispositivo.
-12. Copie as chaves (DevAddr, NwkSKey e AppSKey) do TTN para o arquivo de firmware do PlatformIO (keyfiles/lorawan-keys.h).
-
-
 
 ## WebHook
 
