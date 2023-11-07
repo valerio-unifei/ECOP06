@@ -1,4 +1,31 @@
-# Message Queuing Telemetry Transport (MQTT)
+# Sistemas LoRaWAN
+
+Passo a passo do desenvolvimento de uma aplicação LoRaWAN:
+ 1. Baixe o repositório LMIC-node do GitHub (https://github.com/lnlp/LMIC-node).
+ 2. Abra o Visual Studio Code com a extensão PlatformIO instalada.
+ 3. Importe o projeto LMIC-node no PlatformIO.
+ 4. Edite o arquivo platformio.ini e configure as seguintes opções:
+```ini
+default_envs = heltec_wifi_lora_32_v2
+build_flags = -D ABP_ACTIVATION
+build_flags = -D CFG_au915=1
+```
+ 5. Edite o arquivo src/LMIC-node.cpp e ajuste a configuração da sub-banda:
+  - No trecho "#elif defined(CFG_us915) || defined(CFG_au915)", altere o valor de LMIC_selectSubBand de 1 para 0.
+ 6. Acesse o site do The Things Network (TTN) (https://www.thethingsnetwork.org/) e crie uma conta.
+ 7. Acesse o cluster Australiano do TTN (https://au1.cloud.thethings.network/console).
+ 8. Crie uma nova aplicação no TTN.
+ 9. Crie um novo dispositivo (End Device) para a aplicação, selecione a frequência Australiana e escolha o modo de autenticação ABP.
+ 10. Gere aleatoriamente as chaves necessárias e salve o dispositivo.
+ 11. Copie as chaves (DevAddr, NwkSKey e AppSKey) do TTN para o arquivo de firmware do PlatformIO (keyfiles/lorawan-keys.h).
+ 5. Edite o arquivo keyfiles/lorawan-keys.h e preencha as seguintes informações:
+```c
+#define ABP_DEVADDR
+#define ABP_NWKSKEY
+#define ABP_APPSKEY
+```
+
+## Message Queuing Telemetry Transport (MQTT)
 
 É um protocolo de comunicação máquina para máquina (M2M - Machine to Machine) com 
 foco em Internet of Things (IoT) que funciona em cima do protocolo TCP/IP. 
@@ -28,33 +55,6 @@ pip install paho-mqtt
 3. Publique no tópico (Topic) "ECOP06-ECA-2022"
 4. Use QOS mais seguro
 5. Repita a publicação a cada 30 segundos exatos
-
-# Sistemas LoRaWAN
-
-Passo a passo do desenvolvimento de uma aplicação LoRaWAN:
- 1. Baixe o repositório LMIC-node do GitHub (https://github.com/lnlp/LMIC-node).
- 2. Abra o Visual Studio Code com a extensão PlatformIO instalada.
- 3. Importe o projeto LMIC-node no PlatformIO.
- 4. Edite o arquivo platformio.ini e configure as seguintes opções:
-```ini
-default_envs = heltec_wifi_lora_32_v2
-build_flags = -D ABP_ACTIVATION
-build_flags = -D CFG_au915=1
-```
- 5. Edite o arquivo src/LMIC-node.cpp e ajuste a configuração da sub-banda:
-  - No trecho "#elif defined(CFG_us915) || defined(CFG_au915)", altere o valor de LMIC_selectSubBand de 1 para 0.
- 6. Acesse o site do The Things Network (TTN) (https://www.thethingsnetwork.org/) e crie uma conta.
- 7. Acesse o cluster Australiano do TTN (https://au1.cloud.thethings.network/console).
- 8. Crie uma nova aplicação no TTN.
- 9. Crie um novo dispositivo (End Device) para a aplicação, selecione a frequência Australiana e escolha o modo de autenticação ABP.
- 10. Gere aleatoriamente as chaves necessárias e salve o dispositivo.
- 11. Copie as chaves (DevAddr, NwkSKey e AppSKey) do TTN para o arquivo de firmware do PlatformIO (keyfiles/lorawan-keys.h).
- 5. Edite o arquivo keyfiles/lorawan-keys.h e preencha as seguintes informações:
-```c
-#define ABP_DEVADDR
-#define ABP_NWKSKEY
-#define ABP_APPSKEY
-```
 
 ## WebHook
 
