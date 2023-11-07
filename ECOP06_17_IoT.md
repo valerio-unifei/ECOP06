@@ -2,7 +2,7 @@
 A plataforma sem fio de longo alcance e baixo consumo de energia é a escolha tecnológica predominante para a 
 construção de redes IoT em todo o mundo.
 
-<img src="https://tekzitel.com/wp-content/uploads/2020/04/lorawan_schema_resize.png" />
+<img src="https://www.mokosmart.com/wp-content/uploads/2020/01/lorawan-technology02.jpg" />
 
 As aplicações inteligentes de IoT melhoraram a forma como interagimos e estão a dar resposta a alguns dos maiores desafios 
 enfrentados pelas cidades e comunidades: alterações climáticas, controlo da poluição, alerta precoce de catástrofes naturais 
@@ -11,7 +11,7 @@ e salvamento de vidas. As empresas também estão a beneficiar, através de melh
 Esta tecnologia de RF sem fio está sendo integrada em carros, iluminação pública, equipamentos de fabricação, eletrodomésticos, 
 dispositivos vestíveis – qualquer coisa, na verdade. A tecnologia LoRa® está tornando o nosso mundo um Planeta Inteligente.
 
-<img src="https://www.mokosmart.com/wp-content/uploads/2020/01/lorawan-technology02.jpg" />
+<img src="https://tekzitel.com/wp-content/uploads/2020/04/lorawan_schema_resize.png" />
 
 ## Protocolo LoRaWAN
 
