@@ -29,7 +29,37 @@ pip install paho-mqtt
 4. Use QOS mais seguro
 5. Repita a publicação a cada 30 segundos exatos
 
-# WebHook
+# Sistemas LoRaWAN
+
+Passo a passo do desenvolvimento de uma aplicação LoRaWAN:
+ 1. Baixe o repositório LMIC-node do GitHub (https://github.com/lnlp/LMIC-node).
+ 2. Abra o Visual Studio Code com a extensão PlatformIO instalada.
+ 3. Importe o projeto LMIC-node no PlatformIO.
+ 4. Edite o arquivo platformio.ini e configure as seguintes opções:
+```ini
+default_envs = heltec_wifi_lora_32_v2
+build_flags = -D ABP_ACTIVATION
+build_flags = -D CFG_au915=1
+```
+ 5. Edite o arquivo keyfiles/lorawan-keys.h e preencha as seguintes informações:
+```ini
+#define ABP_DEVADDR
+#define ABP_NWKSKEY
+#define ABP_APPSKEY
+```
+(Essas informações serão obtidas posteriormente)
+6. Edite o arquivo src/LMIC-node.cpp e ajuste a configuração da sub-banda:
+ No trecho "#elif defined(CFG_us915) || defined(CFG_au915)", altere o valor de LMIC_selectSubBand de 1 para 0.
+7. Acesse o site do The Things Network (TTN) (https://www.thethingsnetwork.org/) e crie uma conta.
+8. Acesse o cluster Australiano do TTN (https://au1.cloud.thethings.network/console).
+9. Crie uma nova aplicação no TTN.
+10. Crie um novo dispositivo (End Device) para a aplicação, selecione a frequência Australiana e escolha o modo de autenticação ABP.
+11. Gere aleatoriamente as chaves necessárias e salve o dispositivo.
+12. Copie as chaves (DevAddr, NwkSKey e AppSKey) do TTN para o arquivo de firmware do PlatformIO (keyfiles/lorawan-keys.h).
+
+
+
+## WebHook
 
 Um webhook em IoT (Internet of Things) é uma técnica de comunicação que permite que 
 dispositivos IoT enviem dados para serviços ou aplicativos na web de forma assíncrona. 
@@ -103,3 +133,5 @@ Este código cria um aplicativo Flask com uma rota '/webhook' que aceita solicit
 ### Proposta
 
 Com o envio de dados pelo webhook, mostre uma caixa de texto recebendo a informação do webhook e um gráfico para exibir esses dados em tempo real.
+
+
