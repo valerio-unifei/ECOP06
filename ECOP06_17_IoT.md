@@ -1,4 +1,4 @@
-![image](https://github.com/valerio-unifei/ECOP06/assets/56478031/772f8634-6335-4bab-80fd-6253dddf2a2c)# LoRa
+# LoRa
 A plataforma sem fio de longo alcance e baixo consumo de energia é a escolha tecnológica predominante para a 
 construção de redes IoT em todo o mundo.
 
