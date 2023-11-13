@@ -62,14 +62,30 @@ pip install paho-mqtt
 
 ### Proposta
 
-1. Monte um cliente para publicação (publish)
-2. Crie uma carga de dados (payload) em JSON com:
-   - o carimbo de tempo (timestamp) do computador cliente
-   - seu número de matrícula
-   - IP do computador
-3. Publique no tópico (Topic) "ECOP06-ECA-2022"
-4. Use QOS mais seguro
-5. Repita a publicação a cada 30 segundos exatos
+1. Registre seu e-mail institucional no site: https://www.thethingsnetwork.org
+2. Crie uma aplicação no servidor da Austrália (sim, o Gateway da UNIFEI está alocado errado nessa nuvem...)
+3. Crie um end-device com as configurações:
+ - End device type
+ - Input method: Enter end device specifics manually
+ - Frequency plan: Australia 915-928 MHz, FSB 1
+ - LoRaWAN version: LoRaWAN Specification 1.0.3
+ - Show advanced activation
+ - Activation mode: Activation by personalization (ABP)
+ - Network defaults: User networks default MAC settings
+ - JoinEUI: escreva um hexa aleatório
+ - Gere aleatóriamente:
+   - DevEUI
+   - AppKey
+ - End Device ID: mantenha o gerador
+ - After registration: View registered end device
+ - [ Register end device ]
+4. Vá no end-device criado
+5. Aba "Messaging"
+6. Downlink
+   - FPort: 10
+   - Payload (Bytes): escreva um valor com 8 bytes
+7. Escreva um código em Python para receber esse valor.
+
 
 ## WebHook
 
