@@ -3,11 +3,17 @@ Documentação: https://docs.python.org/3.8/library/threading.html
 
 Fonte: https://towardsdatascience.com/multithreading-multiprocessing-python-180d0975ab29
 
-Execução Concorrente: https://miro.medium.com/max/720/1*0_KY5zM4OlYpEdxpMqjEmQ.webp
+Execução Concorrente: 
 
-Paralelismo: https://miro.medium.com/max/640/1*iuM9nenj01Tv-mfQ36c_1g.webp
+<img src="https://miro.medium.com/max/720/1*0_KY5zM4OlYpEdxpMqjEmQ.webp"/>
 
-Paralelismo concorrente: https://miro.medium.com/max/720/1*dNdE7O8exRHD0NKnq3eWJQ.webp
+Paralelismo: 
+
+<img src="https://miro.medium.com/max/640/1*iuM9nenj01Tv-mfQ36c_1g.webp"/>
+
+Paralelismo concorrente: 
+
+<img src="https://miro.medium.com/max/720/1*dNdE7O8exRHD0NKnq3eWJQ.webp"/>
 
 Um thread é uma sequência de instruções que estão sendo executadas dentro do contexto de um processo. 
 Um processo pode gerar vários threads, mas todos eles compartilharão a mesma memória.
